@@ -1,8 +1,8 @@
 ========================================
-Stirling-PDF - Windows Testing Package
+PDF Converter - Windows Package
 ========================================
 
-This is a portable version of Stirling-PDF for Windows testing.
+This is a portable version of PDF Converter for Windows.
 
 REQUIREMENTS:
 -------------
@@ -29,10 +29,10 @@ TO STOP:
 
 FILES INCLUDED:
 ---------------
-- stirling-pdf-1.6.0.jar    - The main application
-- run-windows.bat            - Launcher script (double-click this!)
+- pdf-converter-1.6.0.jar    - The main application
+- run-windows.bat             - Launcher script (double-click this!)
 - README-WINDOWS.txt         - This file
-- configs/                   - Configuration folder (created on first run)
+- configs/                    - Configuration folder (created on first run)
 
 TROUBLESHOOTING:
 ---------------
@@ -54,5 +54,5 @@ NOTES:
 
 For questions or issues, check the main README.md file.
 
-Enjoy testing Stirling-PDF!
+Enjoy using PDF Converter!
 

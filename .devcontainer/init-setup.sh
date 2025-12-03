@@ -34,14 +34,7 @@ GRADLE_PATH=$(which gradle)
 JAVA_VERSION=$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')
 JAVA_PATH=$(which java)
 
-echo """
- ____ _____ ___ ____  _     ___ _   _  ____       ____  ____  _____
-/ ___|_   _|_ _|  _ \| |   |_ _| \ | |/ ___|     |  _ \|  _ \|  ___|
-\___ \ | |  | || |_) | |    | ||  \| | |  _ _____| |_) | | | | |_
- ___) || |  | ||  _ <| |___ | || |\  | |_| |_____|  __/| |_| |  _|
-|____/ |_| |___|_| \_\_____|___|_| \_|\____|     |_|   |____/|_|
-"""
-echo -e "Stirling-PDF Version: \e[32m$VERSION\e[0m"
+echo -e "PDF Converter Version: \e[32m$VERSION\e[0m"
 echo -e "Gradle Version: \e[32m$GRADLE_VERSION\e[0m"
 echo -e "Gradle Path: \e[32m$GRADLE_PATH\e[0m"
 echo -e "Java Version: \e[32m$JAVA_VERSION\e[0m"

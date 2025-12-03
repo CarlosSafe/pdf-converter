@@ -11,5 +11,5 @@ QUICK START GUIDE
 
 4. Browser opens to http://localhost:8080
 
-That's it! Enjoy testing Stirling-PDF!
+That's it! Enjoy using PDF Converter!
 

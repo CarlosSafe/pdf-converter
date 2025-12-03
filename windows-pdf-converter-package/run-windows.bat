@@ -1,9 +1,9 @@
 @echo off
-REM Stirling-PDF Windows Launcher
-REM This script runs Stirling-PDF on Windows
+REM PDF Converter Windows Launcher
+REM This script runs PDF Converter on Windows
 
 echo ========================================
-echo Stirling-PDF - Starting Application
+echo PDF Converter - Starting Application
 echo ========================================
 echo.
 
@@ -20,7 +20,7 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo Java found! Starting Stirling-PDF...
+echo Java found! Starting PDF Converter...
 echo.
 echo The application will open in your browser at: http://localhost:8080
 echo.
@@ -29,7 +29,7 @@ echo ========================================
 echo.
 
 REM Run the application
-java -jar "stirling-pdf-1.6.0.jar" --spring.profiles.active=default
+java -jar "pdf-converter-1.6.0.jar" --spring.profiles.active=default
 
 pause
 

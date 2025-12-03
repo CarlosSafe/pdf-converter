@@ -1,0 +1,15 @@
+QUICK START GUIDE
+=================
+
+1. Make sure Java is installed
+   - Run: java -version
+   - If error, download from: https://adoptium.net/temurin/releases/
+
+2. Double-click: run-windows.bat
+
+3. Wait 10-30 seconds for startup
+
+4. Browser opens to http://localhost:8080
+
+That's it! Enjoy testing Stirling-PDF!
+

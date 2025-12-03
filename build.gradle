@@ -43,7 +43,7 @@ ext.isSecurityDisabled = { ->
 jar {
     enabled = false
     manifest {
-        attributes "Implementation-Title": "Stirling-PDF",
+        attributes "Implementation-Title": "PDF-Converter",
             "Implementation-Version": project.version
     }
 }
@@ -249,11 +249,11 @@ jpackage {
     dependsOn(":stirling-pdf:bootJar")
     input = layout.projectDirectory.dir("app/core/build/libs")
     destination = layout.projectDirectory.dir("build/jpackage")
-    mainJar = "Stirling-PDF-${project.version}.jar"
-    appName = "Stirling PDF"
+    mainJar = "PDF-Converter-${project.version}.jar"
+    appName = "PDF Converter"
     appVersion = project.version
-    vendor = "Stirling PDF Inc"
-    appDescription = "Stirling PDF - Your Local PDF Editor"
+    vendor = "PDF Converter Inc"
+    appDescription = "PDF Converter - Your Local PDF Editor"
     icon = layout.projectDirectory.file("app/core/src/main/resources/static/favicon.ico")
     verbose = true
 //    mainClass = "org.springframework.boot.loader.launch.JarLauncher"
@@ -285,12 +285,12 @@ jpackage {
         winShortcutPrompt = true  // Lets user choose whether to create shortcuts
         winDirChooser = true  // Allows users to choose installation directory
         winPerUserInstall = false
-        winMenuGroup = "Stirling PDF"
+        winMenuGroup = "PDF Converter"
         winUpgradeUuid = "2a43ed0c-b8c2-40cf-89e1-751129b87641" // Unique identifier for updates
         winHelpUrl = "https://github.com/Stirling-Tools/Stirling-PDF"
         winUpdateUrl = "https://github.com/Stirling-Tools/Stirling-PDF/releases"
         type = ImageType.EXE
-        installDir = "C:/Program Files/Stirling-PDF"
+        installDir = "C:/Program Files/PDF-Converter"
     }
 
     // MacOS-specific configuration
@@ -298,8 +298,8 @@ jpackage {
         appVersion = getMacVersion(project.version.toString())
         icon = layout.projectDirectory.file("app/core/src/main/resources/static/favicon.icns")
         type = ImageType.DMG
-        macPackageIdentifier = "Stirling PDF"
-        macPackageName = "Stirling PDF"
+        macPackageIdentifier = "PDF Converter"
+        macPackageName = "PDF Converter"
         macAppCategory = "public.app-category.productivity"
         macSign = false // Enable signing
         macAppStore = false // Not targeting App Store initially
@@ -329,7 +329,7 @@ jpackage {
         linuxAppRelease = "1"
         linuxPackageDeps = true
 
-        installDir = "/opt/Stirling-PDF"
+        installDir = "/opt/PDF-Converter"
 
         // RPM-specific settings
         //linuxRpmLicenseType = "MIT"
@@ -354,7 +354,7 @@ jpackage {
     ]*/
 
     // Add copyright and license information
-    copyright = "Copyright © 2025 Stirling PDF Inc."
+    copyright = "Copyright © 2025 PDF Converter Inc."
     licenseFile = layout.projectDirectory.file("LICENSE")
 }
 
@@ -389,16 +389,16 @@ tasks.register('jpackageMacX64') {
         def result = exec {
             commandLine 'jpackage',
                 '--type', 'dmg',
-                '--name', 'Stirling PDF (x86_64)',
+                '--name', 'PDF Converter (x86_64)',
                 '--input', 'app/core/build/libs',
-                '--main-jar', "Stirling-PDF-${project.version}.jar",
+                '--main-jar', "PDF-Converter-${project.version}.jar",
                 '--main-class', 'org.springframework.boot.loader.launch.JarLauncher',
                 '--runtime-image', file(jrePath + "/zulu-17.jre/Contents/Home"),
                 '--dest', 'build/jpackage/x86_64',
                 '--icon', 'app/core/src/main/resources/static/favicon.icns',
                 '--app-version', getMacVersion(project.version.toString()),
-                '--mac-package-name', 'Stirling PDF (x86_64)',
-                '--mac-package-identifier', 'Stirling PDF (x86_64)',
+                '--mac-package-name', 'PDF Converter (x86_64)',
+                '--mac-package-identifier', 'PDF Converter (x86_64)',
                 '--mac-app-category', 'public.app-category.productivity',
 
                 // Java options
@@ -483,7 +483,7 @@ tasks.register('cleanTempJre') {
 launch4j {
     icon = "${projectDir}/app/core/src/main/resources/static/favicon.ico"
 
-    outfile="Stirling-PDF.exe"
+    outfile="PDF-Converter.exe"
 
     if(System.getenv("STIRLING_PDF_DESKTOP_UI") == 'true') {
         headerType = "gui"
@@ -503,14 +503,14 @@ launch4j {
 
     jreMinVersion="17"
 
-    mutexName="Stirling-PDF"
-    windowTitle="Stirling-PDF"
+    mutexName="PDF-Converter"
+    windowTitle="PDF-Converter"
 
-    messagesStartupError="An error occurred while starting Stirling-PDF"
+    messagesStartupError="An error occurred while starting PDF-Converter"
     // messagesJreNotFoundError="This application requires a Java Runtime Environment, Please download Java 17."
     messagesJreVersionError="You are running the wrong version of Java, Please download Java 21."
     messagesLauncherError="Java is corrupted. Please uninstall and then install  Java 21."
-    messagesInstanceAlreadyExists="Stirling-PDF is already running."
+    messagesInstanceAlreadyExists="PDF-Converter is already running."
 }
 
 spotless {
